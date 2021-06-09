@@ -11,7 +11,7 @@ app.set('key', config.key);
 
 
 exports.Store = async function(request, response) {
-    const dbo = mongo.db("medical");
+    const dbo = mongo.db("auditoria");
 
     const environmentObject = await config.environments.find( env => env.token == request.body.environment )
     if(environmentObject){
@@ -27,7 +27,7 @@ exports.Store = async function(request, response) {
 
 
 exports.GetData = async function(request, response) {
-    const dbo   = mongo.db("medical");
+    const dbo   = mongo.db("auditoria");
     const where = {
         "record_id" : `${request.params.record_id}`,
         "instance"  : request.params.instance,
