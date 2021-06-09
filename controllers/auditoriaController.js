@@ -1,6 +1,5 @@
 const express         = require('express')
 const app             = express()
-const bcrypt          = require("bcrypt");
 const client_mongo    = require('../config/database.js')
 const jwt             = require('jsonwebtoken')
 const config          = require('../config/config')
